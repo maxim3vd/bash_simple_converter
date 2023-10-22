@@ -16,6 +16,14 @@ simple_converter() {
     fi
 }
 
+display_options() {
+    echo "Select an option"
+    echo "0. Type '0' or 'quit' to end program"
+    echo "1. Convert units"
+    echo "2. Add a definition"
+    echo "3. Delete a definition"
+}
+
 check_definition() {
     re_def='[A-Za-z]_to_[A-Za-z]'
     re_const='^[+-]?[0-9]+\.?[0-9]*$'
