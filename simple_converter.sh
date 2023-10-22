@@ -10,6 +10,7 @@ simple_converter() {
     isValidDefinition=$?
     if [ $isValidDefinition -eq 1 ]; then
         echo "Enter a value to convert:"
+        read user_value
     fi
 }
 
