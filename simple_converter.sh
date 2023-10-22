@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 simple_converter() {
-    echo "Welcome to the Simple converter!"
+    echo -e "Welcome to the Simple converter!\n"
     read -a user_input
     arr_length="${#user_input[@]}"
     definition="${user_input[0]}"
