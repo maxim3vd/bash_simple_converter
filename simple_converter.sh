@@ -12,6 +12,7 @@ simple_converter() {
         echo "Enter a value to convert:"
         read user_value
         check_value
+        conversion
     fi
 }
 
@@ -34,6 +35,11 @@ check_value() {
         echo "Enter a float or integer value!"
         read user_value
     done
+}
+
+conversion() {
+    result=$(echo "$constant * $user_value" | bc)
+    echo "Result: $result"
 }
 
 simple_converter
