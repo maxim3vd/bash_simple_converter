@@ -1,23 +1,26 @@
 #!/usr/bin/bash
 
 simple_converter() {
-    echo -e "Welcome to the Simple converter!\n"
-    read -a user_input
-    arr_length="${#user_input[@]}"
-    definition="${user_input[0]}"
-    constant="${user_input[1]}"
-    check_definition $arr_length $definition $constant
-    isValidDefinition=$?
-    if [ $isValidDefinition -eq 1 ]; then
-        echo "Enter a value to convert:"
-        read user_value
-        check_value $user_value
-        conversion $constant $user_value
-    fi
+    echo "Welcome to the Simple converter!"
+
+    while :
+    do
+        display_options
+        read user_option
+        case $user_option in
+            0 | quit )
+                echo "Goodbye!"
+                break;;
+            1 | 2 | 3 )
+                echo "Not implemented!";;
+            * )
+                echo "Invalid option!";;
+        esac
+    done
 }
 
 display_options() {
-    echo "Select an option"
+    echo -e "\nSelect an option"
     echo "0. Type '0' or 'quit' to end program"
     echo "1. Convert units"
     echo "2. Add a definition"
