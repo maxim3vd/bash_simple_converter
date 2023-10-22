@@ -11,6 +11,7 @@ simple_converter() {
     if [ $isValidDefinition -eq 1 ]; then
         echo "Enter a value to convert:"
         read user_value
+        check_value
     fi
 }
 
@@ -24,6 +25,15 @@ check_definition() {
         echo "The definition is incorrect!"
         return 0
     fi
+}
+
+check_value() {
+    re_value='^[0-9]+([.][0-9]+)?$'
+    while [[ ! $user_value =~ $re_value ]];
+    do
+        echo "Enter a float or integer value!"
+        read user_value
+    done
 }
 
 simple_converter
