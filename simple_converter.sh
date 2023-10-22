@@ -20,7 +20,6 @@ check_definition() {
     re_def='[A-Za-z]_to_[A-Za-z]'
     re_const='^[+-]?[0-9]+\.?[0-9]*$'
     if [ $arr_length -eq 2 ] && [[ $definition =~ $re_def ]] && [[ $constant =~ $re_const ]];then
-        echo "The definition is correct!"
         return 1
     else
         echo "The definition is incorrect!"
