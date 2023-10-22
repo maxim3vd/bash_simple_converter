@@ -1,55 +1,101 @@
 # Simple Converter
 
-## Stage 2
+## Stage 3
 
 ### Description
-In this stage, your program will learn how to convert units. Follow the objectives and examples to improve your program. Below is an example of a simple conversion in bash:
-```
-constant=1.6
-value=10
-result=$(echo "scale=2; $constant * $value" | bc -l)
-printf "Result: %s\n" "$result"
-```
+Add a menu to your program and ask users what to do. If users select to end the program, quit with a farewell message.
 
 ### Objectives
 Let's break the task into several steps:
 
-* Start with the message ```Enter a definition:```;
-* Check whether the user input is correct;
-* Ask for the value to convert ```Enter a value to convert```:
-* Check whether the user input is correct;
-* Carry out the conversion;
-* Print the result of the conversion to the standard output.
-
+* Start with a message ```Welcome to the Simple converter!```
+* Ask for an option:
+```
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+```
+* Check whether the option is correct;
+* If the option is incorrect, output ```Invalid option!```
+* If the option is correct, go to the selected menu and output ```Not implemented!```
+* Continue until a user enters ```quit``` or ```0```;
+* When users want to quit, output ```Goodbye!```
 
 ### Examples
-The greater-than symbol followed by a space (> ) represents the user input. Note that it's not part of the input.
+The greater-than symbol followed by a space (```> ```) represents the user input. Note that it's not part of the input.
 
 #### Example 1:
 ```
-Enter a definition:
-> metertocm 100
-The definition is incorrect!
+Welcome to the Simple converter!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+> 1
+Not implemented!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+> 2
+Not implemented!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+> 3
+Not implemented!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+> 0
+Goodbye!
 ```
 
 #### Example 2:
 ```
-Enter a definition:
-> meter_to_cm 100
-Enter a value to convert:
-> 5
-Result: 500
-```
+Welcome to the Simple converter!
 
-#### Example 3:
-```
-Enter a definition:
-> miles_to_km 1.6
-Enter a value to convert:
-> five
-Enter a float or integer value!
->
-Enter a float or integer value!
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
 > 5
-Result: 8.0
+Invalid option!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+>
+Invalid option!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+> one
+Invalid option!
+
+Select an option
+0. Type '0' or 'quit' to end program
+1. Convert units
+2. Add a definition
+3. Delete a definition
+> 0
+Goodbye!
 ```
