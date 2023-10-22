@@ -8,6 +8,9 @@ simple_converter() {
     constant="${user_input[1]}"
     check_definition
     isValidDefinition=$?
+    if [ $isValidDefinition -eq 1 ]; then
+        echo "Enter a value to convert:"
+    fi
 }
 
 check_definition() {
